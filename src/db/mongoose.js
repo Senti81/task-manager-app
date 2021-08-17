@@ -1,6 +1,7 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api', {
+mongoose.connect(process.env.DB_HOST, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false
